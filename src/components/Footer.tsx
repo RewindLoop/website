@@ -1,31 +1,48 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-2 md:col-span-1">
-            <h3 className="text-xl font-bold mb-4">RewindLoop</h3>
+            <div className="mb-4">
+              <Image
+                src="/Rewindloop_Logo.png"
+                alt="RewindLoop"
+                width={140}
+                height={35}
+                className="object-contain"
+              />
+            </div>
             <p className="text-gray-400 mb-4">
               Transforming businesses through innovative technology solutions.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors">
                 <span className="sr-only">Facebook</span>
                 <span>📘</span>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors">
                 <span className="sr-only">Twitter</span>
                 <span>🐦</span>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors">
                 <span className="sr-only">LinkedIn</span>
                 <span>💼</span>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors">
                 <span className="sr-only">GitHub</span>
                 <span>💻</span>
               </a>
@@ -37,22 +54,30 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
+                <Link
+                  href="/about"
+                  className="text-gray-400 hover:text-white transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-400 hover:text-white transition-colors">
+                <Link
+                  href="/services"
+                  className="text-gray-400 hover:text-white transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/portfolio" className="text-gray-400 hover:text-white transition-colors">
+                <Link
+                  href="/portfolio"
+                  className="text-gray-400 hover:text-white transition-colors">
                   Portfolio
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
+                <Link
+                  href="/contact"
+                  className="text-gray-400 hover:text-white transition-colors">
                   Contact
                 </Link>
               </li>
@@ -64,22 +89,30 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors">
                   Web Development
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors">
                   Mobile Development
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors">
                   Cloud Solutions
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors">
                   UI/UX Design
                 </a>
               </li>
@@ -93,7 +126,8 @@ export default function Footer() {
               <li>hello@rewindloop.com</li>
               <li>+1 (555) 123-4567</li>
               <li>
-                123 Innovation Street<br />
+                123 Innovation Street
+                <br />
                 Tech City, TC 12345
               </li>
             </ul>
@@ -106,13 +140,19 @@ export default function Footer() {
             © 2025 RewindLoop. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+            <Link
+              href="#"
+              className="text-gray-400 hover:text-white transition-colors text-sm">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+            <Link
+              href="#"
+              className="text-gray-400 hover:text-white transition-colors text-sm">
               Terms of Service
             </Link>
-            <Link href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+            <Link
+              href="#"
+              className="text-gray-400 hover:text-white transition-colors text-sm">
               Cookie Policy
             </Link>
           </div>

@@ -34,23 +34,27 @@ public/                  # Static assets
 ## 🛠️ Getting Started
 
 ### Prerequisites
-- Node.js 18+ 
+
+- Node.js 18+
 - npm or yarn
 
 ### Installation
 
 1. Clone the repository
+
 ```bash
 git clone https://github.com/RewindLoop/website.git
 cd website
 ```
 
 2. Install dependencies
+
 ```bash
 npm install
 ```
 
 3. Run the development server
+
 ```bash
 npm run dev
 ```
@@ -90,6 +94,7 @@ This project is proprietary and confidential. All rights reserved by RewindLoop.
 ## 📞 Contact
 
 For questions about this project, please contact:
+
 - Email: hello@rewindloop.com
 - Website: https://www.rewindloop.com
 

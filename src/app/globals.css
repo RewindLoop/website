@@ -3,13 +3,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* RewindLoop Brand Colors */
+  --color-primary: #3b82f6;
+  --color-primary-dark: #1e40af;
+  --color-secondary: #ec4899;
+  --color-secondary-dark: #be185d;
+  --color-accent: #f8bbd9;
+  --color-gradient-start: #3b82f6;
+  --color-gradient-middle: #8b5cf6;
+  --color-gradient-end: #ec4899;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +25,128 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Brand Gradient Classes */
+.gradient-brand {
+  background: linear-gradient(
+    135deg,
+    var(--color-gradient-start),
+    var(--color-gradient-middle),
+    var(--color-gradient-end)
+  );
+}
+
+.gradient-brand-text {
+  background: linear-gradient(
+    135deg,
+    var(--color-gradient-start),
+    var(--color-gradient-middle),
+    var(--color-gradient-end)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Custom Brand Colors */
+.text-brand-primary {
+  color: var(--color-primary);
+}
+.text-brand-primary-dark {
+  color: var(--color-primary-dark);
+}
+.text-brand-secondary {
+  color: var(--color-secondary);
+}
+.text-brand-secondary-dark {
+  color: var(--color-secondary-dark);
+}
+.text-brand-accent {
+  color: var(--color-accent);
+}
+
+.bg-brand-primary {
+  background-color: var(--color-primary);
+}
+.bg-brand-primary-dark {
+  background-color: var(--color-primary-dark);
+}
+.bg-brand-secondary {
+  background-color: var(--color-secondary);
+}
+.bg-brand-secondary-dark {
+  background-color: var(--color-secondary-dark);
+}
+.bg-brand-accent {
+  background-color: var(--color-accent);
+}
+
+.border-brand-primary {
+  border-color: var(--color-primary);
+}
+.border-brand-secondary {
+  border-color: var(--color-secondary);
+}
+
+/* Custom Gradient Utilities */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
+/* Moving Gradient Animations */
+@keyframes gradientShift {
+  0% {
+    transform: translateX(-10%) translateY(-10%) rotate(0deg);
+  }
+  33% {
+    transform: translateX(10%) translateY(-5%) rotate(120deg);
+  }
+  66% {
+    transform: translateX(-5%) translateY(10%) rotate(240deg);
+  }
+  100% {
+    transform: translateX(-10%) translateY(-10%) rotate(360deg);
+  }
+}
+
+@keyframes gradientPulse {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes gradientFloat {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-10px);
+  }
+  75% {
+    transform: translateY(-15px) translateX(5px);
+  }
+}
+
+.animate-gradient-shift {
+  animation: gradientShift 20s ease-in-out infinite;
+}
+
+.animate-gradient-pulse {
+  animation: gradientPulse 4s ease-in-out infinite;
+}
+
+.animate-gradient-float {
+  animation: gradientFloat 8s ease-in-out infinite;
 }

@@ -16,7 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "RewindLoop - Professional Technology Solutions",
-  description: "Transform your business with innovative technology solutions from RewindLoop. We specialize in web development, mobile apps, cloud solutions, and digital transformation.",
+  description:
+    "Transform your business with innovative technology solutions from RewindLoop. We specialize in web development, mobile apps, cloud solutions, and digital transformation.",
 };
 
 export default function RootLayout({
@@ -27,12 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Header />
-        <main>
-          {children}
-        </main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
